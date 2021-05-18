@@ -2,31 +2,43 @@ package Start;
 
 
 import java.util.Scanner;
-public class Programm {
+public class quastion1_c{
 
-	//QUASTION 1 A B
+	//QUASTION 1 C
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
-		int num, dig,  num1;
+		Scanner sc = new Scanner(System.in);	
+		int m, num, num1,dig;
 		
-		System.out.println("Please enter at first a number that do you like to check, and after a digit that you want to find in this number : ");
-		num = sc.nextInt();
+		System.out.println("Please enter a positive number of pairs ");
 		do {
-			dig=sc.nextInt();
-			if(dig<0&& dig >9)
-				System.out.println("Please enter a digit! 0-9 ! : ");
-		}while(dig<0&& dig >9);
+			
+		m=sc.nextInt();
 		
-		digit(num,dig);
-		System.out.println(digit(num,dig));
+		if(m<0)
+			System.out.println("Error, please try again. /n Please enter a positive number : ");
 		
-		System.out.println("Please enter a number what you wanna chek : ");
+		}while(m<0);
 		
-		num1 = sc.nextInt();
-		number(num, num1);
-		System.out.println(number(num, num1));
+		
+		
+		for(int i = 1; i<=m; i++) {
+			System.out.println("This is a pair of number No : "+i);
+			System.out.println("Plese enter a first number of the pair : ");
+			num = sc.nextInt();
+			System.out.println("Plese enter a second number of the pair : ");
+			num1 = sc.nextInt();
+			
+			System.out.println("True = Yes  & False = NO " + number(num,num1));
+			
+			if(number(num,num1))
+				System.out.println("YES");
+			else
+				System.out.println("NO");
+		}
+		
+
 	}
 
 	//A
@@ -66,6 +78,12 @@ public class Programm {
 				break;
 			}
 
+//				32121 321 YES    	OK
+//				32645 3562 NO		OK
+//				123 32112 YES		OK
+//				1003 3274 NO		OK
+//				1012 1042 NO		ok
+//			}
 			
 		}
 		
